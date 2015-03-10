@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+use FindBin qw($Bin);
+use lib "$Bin/lib";
+use Oogaboogoo::Conversions;
+
+my ( $mday, $mon, $year, $wday ) = (localtime)[ 3 .. 6 ];
+my $day_name   = number_to_day_name($wday);
+my $month_name = number_to_month_name($mon);
+$year += 1900;
+printf "today is %s, %s %d, %d\n", $day_name, $month_name, $mday, $year;
