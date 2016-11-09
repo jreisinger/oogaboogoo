@@ -4,7 +4,7 @@ use warnings;
 
 use FindBin qw($Bin);
 use lib "$Bin/lib";
-use Oogaboogoo::Conversions;
+use Oogaboogoo::Conversions qw(:all);
 
 my ( $mday, $mon, $year, $wday ) = (localtime)[ 3 .. 6 ];
 my $day_name   = number_to_day_name($wday);

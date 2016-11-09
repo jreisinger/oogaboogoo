@@ -5,6 +5,7 @@ use Exporter qw(import);
 use Carp;
 
 our @EXPORT = qw(number_to_day_name number_to_month_name);
+our %EXPORT_TAGS = ( all => \@EXPORT );
 
 sub number_to_day_name {
     my $num = shift;
